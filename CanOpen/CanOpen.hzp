@@ -1,0 +1,261 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="CanOpen" target="8" version="2">
+  <project Name="CanOpen">
+    <configuration
+      Name="Common"
+      Placement="Flash"
+      Target="STM32F072RB"
+      arm_architecture="v6M"
+      arm_core_type="Cortex-M0"
+      arm_fpu_type="None"
+      arm_gcc_target="arm-unknown-eabi"
+      arm_linker_heap_size="4000"
+      arm_linker_jtag_pad_pre_dr="1"
+      arm_linker_jtag_pad_pre_ir="5"
+      arm_linker_process_stack_size="1000"
+      arm_linker_stack_size="1000000"
+      arm_simulator_memory_simulation_filename="$(TargetsDir)/STM32/STM32SimulatorMemory.dll"
+      arm_simulator_memory_simulation_parameter="STM32F072RB;0x20000;0x4000"
+      arm_target_connect_with_reset="Yes"
+      arm_target_debug_interface_type="ADIv5"
+      arm_target_interface_type="Default"
+      arm_target_loader_applicable_loaders="Flash"
+      arm_target_loader_default_loader="Flash"
+      arm_target_restrict_memory_accesses="Yes"
+      c_preprocessor_definitions="STARTUP_FROM_RESET"
+      c_user_include_directories="F:/CanOpen-SMR48_GOLDEN/CanOpen-SMR48/Inc;F:/CanOpen-SMR48_GOLDEN/CanOpen-SMR48/Src;F:/CanOpen-SMR48_GOLDEN/CanOpen-SMR48/STM32F0xx_HAL_Driver/Src;F:/CanOpen-SMR48_GOLDEN/CanOpen-SMR48/STM32F0xx_HAL_Driver/Inc;F:/CanOpen-SMR48_GOLDEN/CanOpen-SMR48/CanOpen Stack/Inc;F:/CanOpen-SMR48_GOLDEN/CanOpen-SMR48/CanOpen Stack/Src"
+      debug_register_definition_file="$(TargetsDir)/STM32/STM32F072x_Peripherals.xml"
+      linker_memory_map_file="$(TargetsDir)/STM32/STM32F072RB_MemoryMap.xml"
+      linker_output_format="hex"
+      linker_section_placement_file="$(StudioDir)/targets/Cortex_M/flash_placement.xml"
+      project_directory=""
+      project_type="Executable"
+      property_groups_file_path="$(TargetsDir)/STM32/propertyGroups.xml"
+      target_get_partname_script="GetPartName()"
+      target_match_partname_script="MatchPartName(&quot;$(Target)&quot;)"
+      target_reset_script="Reset()"
+      target_trace_initialize_script="EnableTrace(&quot;$(TraceInterfaceType)&quot;)" />
+    <configuration
+      Name="Flash"
+      arm_target_flash_loader_file_path="$(LOADER:$(TargetsDir)/STM32/Release/STM32F0_Loader_rpc.elf)"
+      arm_target_flash_loader_type="LIBMEM RPC Loader"
+      arm_target_loader_can_erase_all="Yes"
+      arm_target_loader_can_lock_all="No"
+      arm_target_loader_can_lock_range="No"
+      arm_target_loader_can_unlock_all="No"
+      arm_target_loader_can_unlock_range="No"
+      target_reset_script="FLASHReset()" />
+    <folder Name="Source Files">
+      <configuration Name="Common" filter="c;cpp;cxx;cc;h;s;asm;inc" />
+      <folder Name="Inc">
+        <file file_name="Inc/core_cm0.h" />
+        <file file_name="Inc/core_cmFunc.h" />
+        <file file_name="Inc/main.h" />
+        <file file_name="Inc/stm32f0xx.h" />
+        <file file_name="Inc/stm32f0xx_it.h" />
+        <file file_name="Inc/stm32f0xx_nucleo.h" />
+        <file file_name="Inc/stm32f072xb.h" />
+        <file file_name="Inc/system_stm32f0xx.h" />
+      </folder>
+      <folder Name="Src">
+        <file file_name="Src/main.c" />
+        <file file_name="Src/stm32f0xx_it.c" />
+        <file file_name="Src/system_stm32f0xx.c" />
+        <configuration
+          Name="Common"
+          c_user_include_directories="D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48/Inc;D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48/Src;D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48/STM32F0xx_HAL_Driver/Src;D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48/STM32F0xx_HAL_Driver/Inc;D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48/CanOpen Stack/Src;D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48/CanOpen Stack/Inc" />
+      </folder>
+      <folder Name="STM32F0xx_HAL_Driver">
+        <folder Name="Inc">
+          <folder Name="Legacy">
+            <file file_name="STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h" />
+          </folder>
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_can.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_cec.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_comp.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_conf.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_conf_template.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_cortex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_crc.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_crc_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dac.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dac_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_dma_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_flash_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2c_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_i2s.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_irda.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_irda_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_iwdg.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_smartcard.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_smartcard_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_smbus.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tsc.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_usart_ex.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_wwdg.h" />
+        </folder>
+        <folder Name="Src">
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_adc_ex.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_can.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cec.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_comp.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_conf.h" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_crc.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_crc_ex.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dac_ex.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.cPreview" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2s.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_irda.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_iwdg.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_msp_template.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pcd.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pcd_ex.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rtc.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rtc_ex.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_smartcard.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_smartcard_ex.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_smbus.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tsc.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_uart_ex.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_usart.c" />
+          <file file_name="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_wwdg.c" />
+        </folder>
+      </folder>
+      <folder Name="CanOpen Stack">
+        <folder Name="Inc">
+          <file file_name="CanOpen Stack/Inc/application.h" />
+          <file file_name="CanOpen Stack/Inc/CANopen.h" />
+          <file file_name="CanOpen Stack/Inc/CO_common.h" />
+          <file file_name="CanOpen Stack/Inc/CO_driver.h" />
+          <file file_name="CanOpen Stack/Inc/CO_driver.hPreview" />
+          <file file_name="CanOpen Stack/Inc/CO_Emergency.h" />
+          <file file_name="CanOpen Stack/Inc/CO_HBconsumer.h" />
+          <file file_name="CanOpen Stack/Inc/CO_NMT_Heartbeat.h" />
+          <file file_name="CanOpen Stack/Inc/CO_OD.h" />
+          <file file_name="CanOpen Stack/Inc/CO_OD.hPreview" />
+          <file file_name="CanOpen Stack/Inc/CO_PDO.h" />
+          <file file_name="CanOpen Stack/Inc/CO_SDO.h" />
+          <file file_name="CanOpen Stack/Inc/CO_SDOmaster.h" />
+          <file file_name="CanOpen Stack/Inc/CO_SYNC.h" />
+          <file file_name="CanOpen Stack/Inc/common.h" />
+          <file file_name="CanOpen Stack/Inc/crc16-ccitt.h" />
+          <file file_name="CanOpen Stack/Inc/isr.h" />
+          <file file_name="CanOpen Stack/Inc/led.h" />
+          <file file_name="CanOpen Stack/Inc/led.hPreview" />
+          <file file_name="CanOpen Stack/Inc/timer.h" />
+          <file file_name="CanOpen Stack/Inc/misc.h" />
+          <file file_name="CanOpen Stack/Inc/CLibrary.h" />
+        </folder>
+        <folder Name="Src">
+          <file file_name="CanOpen Stack/Src/application.c" />
+          <file file_name="CanOpen Stack/Src/CANopen.c" />
+          <file file_name="CanOpen Stack/Src/CO_common.c" />
+          <file file_name="CanOpen Stack/Src/co_driver.c" />
+          <file file_name="CanOpen Stack/Src/CO_Emergency.c" />
+          <file file_name="CanOpen Stack/Src/CO_HBconsumer.c" />
+          <file file_name="CanOpen Stack/Src/CO_NMT_Heartbeat.c" />
+          <file file_name="CanOpen Stack/Src/CO_OD.c" />
+          <file file_name="CanOpen Stack/Src/CO_PDO.c" />
+          <file file_name="CanOpen Stack/Src/CO_SDO.c" />
+          <file file_name="CanOpen Stack/Src/CO_SDOmaster.c" />
+          <file file_name="CanOpen Stack/Src/CO_SYNC.c" />
+          <file file_name="CanOpen Stack/Src/crc16-ccitt.c" />
+          <file file_name="CanOpen Stack/Src/isr.c" />
+          <file file_name="CanOpen Stack/Src/timer.c" />
+          <file file_name="CanOpen Stack/Src/misc.c" />
+          <file file_name="Inc/core_cmInstr.h" />
+          <configuration
+            Name="Common"
+            c_user_include_directories="D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48/Inc;D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48/Src;D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48/STM32F0xx_HAL_Driver/Src;D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48/STM32F0xx_HAL_Driver/Inc;D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48/CanOpen Stack/Inc;D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48/CanOpen Stack/Src;D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48/CanOpen Stack;." />
+          <file file_name="CanOpen Stack/Src/CLibrary.c" />
+          <file file_name="CanOpen Stack/Src/led.c" />
+        </folder>
+        <configuration
+          Name="Common"
+          c_user_include_directories="D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48/CanOpen Stack" />
+      </folder>
+    </folder>
+    <folder Name="System Files">
+      <file file_name="$(StudioDir)/source/thumb_crt0.s" />
+      <file file_name="$(TargetsDir)/STM32/STM32_Startup.s">
+        <configuration Name="Common" c_preprocessor_definitions="" />
+      </file>
+      <file file_name="$(TargetsDir)/STM32/STM32_Target.js">
+        <configuration Name="Common" file_type="Reset Script" />
+      </file>
+    </folder>
+    <configuration
+      Name="THUMB"
+      c_preprocessor_definitions="STARTUP_FROM_RESET" />
+    <configuration
+      Name="Debug"
+      c_preprocessor_definitions="STARTUP_FROM_RESET" />
+    <configuration Name="THUMB Debug" arm_linker_stack_size="10000" />
+  </project>
+  <configuration Name="THUMB Debug" inherited_configurations="THUMB;Debug" />
+  <configuration
+    Name="THUMB"
+    Platform="ARM"
+    arm_instruction_set="Thumb"
+    arm_library_instruction_set="Thumb"
+    c_preprocessor_definitions="__THUMB"
+    hidden="Yes" />
+  <configuration
+    Name="Debug"
+    c_preprocessor_definitions="DEBUG"
+    gcc_debugging_level="Level 2"
+    gcc_optimization_level="None"
+    hidden="Yes" />
+  <configuration
+    Name="THUMB Release"
+    inherited_configurations="THUMB;Release" />
+  <configuration
+    Name="Release"
+    c_preprocessor_definitions="NDEBUG"
+    gcc_debugging_level="Level 1"
+    gcc_optimization_level="Level 1"
+    hidden="Yes" />
+</solution>
