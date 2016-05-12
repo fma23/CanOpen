@@ -1,0 +1,119 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints>
+  <BreakpointListItem line="300" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="2" counter="0" isFunctionBreakpoint="false" filename="CanOpen Stack/Src/CO_OD.c" expression="CO_OD_entry_t " />
+  <BreakpointListItem line="49" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="4" counter="0" isFunctionBreakpoint="false" filename="STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_adc.h" expression="" />
+ </Breakpoints>
+ <ExecutionProfileWindow/>
+ <FrameBufferWindow>
+  <FrameBufferWindow addressText="" bufferWidth="-1" bufferHeight="-1" addressSpace="" />
+ </FrameBufferWindow>
+ <Memory1>
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="BlinkyLED2_3" addressSpace="" />
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="CanOpen" addressSpace="" />
+ </Memory1>
+ <Memory2>
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="BlinkyLED2_3" addressSpace="" />
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="CanOpen" addressSpace="" />
+ </Memory2>
+ <Memory3>
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="BlinkyLED2_3" addressSpace="" />
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="CanOpen" addressSpace="" />
+ </Memory3>
+ <Memory4>
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="BlinkyLED2_3" addressSpace="" />
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="CanOpen" addressSpace="" />
+ </Memory4>
+ <Project>
+  <ProjectSessionItem path="CanOpen" name="unnamed" />
+  <ProjectSessionItem path="CanOpen;CanOpen" name="unnamed" />
+  <ProjectSessionItem path="CanOpen;CanOpen;Source Files" name="unnamed" />
+  <ProjectSessionItem path="CanOpen;CanOpen;Source Files;CanOpen Stack" name="unnamed" />
+  <ProjectSessionItem path="CanOpen;CanOpen;Source Files;CanOpen Stack;Inc" name="unnamed" />
+  <ProjectSessionItem path="CanOpen;CanOpen;Source Files;CanOpen Stack;Src" name="unnamed" />
+  <ProjectSessionItem path="CanOpen;CanOpen;Source Files;Inc" name="unnamed" />
+  <ProjectSessionItem path="CanOpen;CanOpen;Source Files;Src" name="unnamed" />
+  <ProjectSessionItem path="CanOpen;CanOpen;Source Files;STM32F0xx_HAL_Driver" name="unnamed" />
+  <ProjectSessionItem path="CanOpen;CanOpen;Source Files;STM32F0xx_HAL_Driver;Src" name="unnamed" />
+  <ProjectSessionItem path="CanOpen;CanOpen;System Files" name="unnamed" />
+ </Project>
+ <Register1>
+  <RegisterWindow openNodes="CPU - Current Context" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="" name="BlinkyLED2_3" />
+  <RegisterWindow openNodes="CPU - Current Context" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="" name="CanOpen" />
+ </Register1>
+ <Register2>
+  <RegisterWindow openNodes="CPU - Current Context" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="" name="BlinkyLED2_3" />
+  <RegisterWindow openNodes="CPU - Current Context" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="" name="CanOpen" />
+ </Register2>
+ <Register3>
+  <RegisterWindow openNodes="CPU - Current Context" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="" name="BlinkyLED2_3" />
+  <RegisterWindow openNodes="CPU - Current Context" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="" name="CanOpen" />
+ </Register3>
+ <Register4>
+  <RegisterWindow openNodes="CPU - Current Context" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="" name="BlinkyLED2_3" />
+  <RegisterWindow openNodes="CPU - Current Context" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="" name="CanOpen" />
+ </Register4>
+ <TargetWindow programAction="" uploadFileType="" programLoadAddress="" programSize="" uploadFileName="" uploadMemoryInterface="" programFileName="" uploadStartAddress="" programFileType="" uploadSize="" programMemoryInterface="" />
+ <TraceWindow>
+  <Trace enabled="Yes" />
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never" >
+   <Watchpoint evalMode="0" linenumber="0" evalType="0" radix="-1" name="iocurrent" expression="iocurrent" filename="../canopen-smr48" />
+   <Watchpoint evalMode="0" linenumber="0" evalType="0" radix="-1" name="GPIOA" expression="GPIOA" filename="../canopen-smr48" />
+   <Watchpoint evalMode="1" linenumber="0" evalType="0" radix="-1" name="GPIOx" expression="GPIOx" filename="../canopen-smr48" />
+   <Watchpoint evalMode="0" linenumber="0" evalType="0" radix="-1" name="TIMx->ARR" expression="TIMx->ARR" filename="../canopen-smr48" />
+   <Watchpoint evalMode="0" linenumber="265" evalType="0" radix="16" name="ISR_HANDLER EXTI4_15_IRQHandler" expression="ISR_HANDLER EXTI4_15_IRQHandler" filename="src/main.c" />
+   <Watchpoint evalMode="0" linenumber="606" evalType="0" radix="16" name="GPIO_Pin" expression="GPIO_Pin" filename="src/main.c" />
+  </Watches>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never" />
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never" />
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never" />
+ </Watch4>
+ <Files>
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="Src/main.c" y="77" path="Src/main.c" left="0" selected="0" name="unnamed" top="70" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Latin1" x="0" debugPath="Src/stm32f0xx_it.c" y="78" path="Src/stm32f0xx_it.c" left="0" selected="0" name="unnamed" top="54" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/CLibrary.c" y="396" path="CanOpen Stack/Src/CLibrary.c" left="0" selected="0" name="unnamed" top="0" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c" y="445" path="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c" left="0" selected="0" name="unnamed" top="412" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Inc/CLibrary.h" y="44" path="CanOpen Stack/Inc/CLibrary.h" left="0" selected="0" name="unnamed" top="35" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/co_driver.c" y="216" path="CanOpen Stack/Src/co_driver.c" left="0" selected="1" name="unnamed" top="212" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_can.c" y="1082" path="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_can.c" left="0" selected="0" name="unnamed" top="1057" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c" y="313" path="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c" left="0" selected="0" name="unnamed" top="287" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="Inc/stm32f0xx_it.h" y="0" path="Inc/stm32f0xx_it.h" left="0" selected="0" name="unnamed" top="14" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="Inc/stm32f0xx.h" y="0" path="Inc/stm32f0xx.h" left="0" selected="0" name="unnamed" top="201" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="Inc/stm32f072xb.h" y="784" path="Inc/stm32f072xb.h" left="0" selected="0" name="unnamed" top="767" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="Src/system_stm32f0xx.c" y="334" path="Src/system_stm32f0xx.c" left="0" selected="0" name="unnamed" top="285" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/led.c" y="59" path="CanOpen Stack/Src/led.c" left="0" selected="0" name="unnamed" top="15" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Inc/led.h" y="38" path="CanOpen Stack/Inc/led.h" left="0" selected="0" name="unnamed" top="29" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Inc/CO_driver.h" y="178" path="CanOpen Stack/Inc/CO_driver.h" left="0" selected="0" name="unnamed" top="172" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/application.c" y="65" path="CanOpen Stack/Src/application.c" left="0" selected="0" name="unnamed" top="58" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/isr.c" y="114" path="CanOpen Stack/Src/isr.c" left="0" selected="0" name="unnamed" top="110" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="Inc/stm32f0xx_nucleo.h" y="116" path="Inc/stm32f0xx_nucleo.h" left="0" selected="0" name="unnamed" top="107" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c" y="1048" path="STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c" left="0" selected="0" name="unnamed" top="1021" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/timer.c" y="70" path="CanOpen Stack/Src/timer.c" left="0" selected="0" name="unnamed" top="156" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Inc/CO_NMT_Heartbeat.h" y="121" path="CanOpen Stack/Inc/CO_NMT_Heartbeat.h" left="0" selected="0" name="unnamed" top="101" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/CO_NMT_Heartbeat.c" y="149" path="CanOpen Stack/Src/CO_NMT_Heartbeat.c" left="0" selected="0" name="unnamed" top="142" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/CO_Emergency.c" y="194" path="CanOpen Stack/Src/CO_Emergency.c" left="0" selected="0" name="unnamed" top="194" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/CANopen.c" y="417" path="CanOpen Stack/Src/CANopen.c" left="0" selected="0" name="unnamed" top="410" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Inc/CO_OD.h" y="335" path="CanOpen Stack/Inc/CO_OD.h" left="0" selected="0" name="unnamed" top="331" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Inc/CO_PDO.h" y="164" path="CanOpen Stack/Inc/CO_PDO.h" left="0" selected="0" name="unnamed" top="160" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Inc/CANopen.h" y="116" path="CanOpen Stack/Inc/CANopen.h" left="0" selected="0" name="unnamed" top="112" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/CO_OD.c" y="155" path="CanOpen Stack/Src/CO_OD.c" left="0" selected="0" name="unnamed" top="155" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Inc/CO_SDO.h" y="535" path="CanOpen Stack/Inc/CO_SDO.h" left="0" selected="0" name="unnamed" top="535" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="Inc/main.h" y="44" path="Inc/main.h" left="0" selected="0" name="unnamed" top="30" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/CO_SDO.c" y="440" path="CanOpen Stack/Src/CO_SDO.c" left="0" selected="0" name="unnamed" top="430" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/CO_PDO.c" y="122" path="CanOpen Stack/Src/CO_PDO.c" left="0" selected="0" name="unnamed" top="112" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/CO_HBconsumer.c" y="102" path="CanOpen Stack/Src/CO_HBconsumer.c" left="0" selected="0" name="unnamed" top="94" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/CO_SYNC.c" y="0" path="CanOpen Stack/Src/CO_SYNC.c" left="0" selected="0" name="unnamed" top="99" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Src/misc.c" y="101" path="CanOpen Stack/Src/misc.c" left="0" selected="0" name="unnamed" top="91" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="CanOpen Stack/Inc/application.h" y="145" path="CanOpen Stack/Inc/application.h" left="0" selected="0" name="unnamed" top="137" />
+ </Files>
+ <ARMCrossStudioWindow activeProject="CanOpen" autoConnectTarget="ST-LINK" debugSearchFileMap="" fileDialogInitialDirectory="D:/Embedded/CrossWorks_STM32F072RB/CanOpen-SMR48" fileDialogDefaultFilter="*.c" autoConnectCapabilities="265599" debugSearchPath="" buildConfiguration="THUMB Debug" />
+</session>
