@@ -1,0 +1,98 @@
+/******************************************************************************************
+ * CAN module object for Microchip STM32F103 microcontroller.
+ *
+ * @file        Clibrary.h
+ * @version    
+ * @author      Farid mabrouk
+ ******************************************************************************************/
+
+
+#include "stm32f0xx_hal.h"
+#include "stm32f0xx_hal_def.h"
+#include "stm32f072xb.h"
+#include "stm32f0xx_hal_can.h"
+#include "CO_driver.h"
+#include "stm32f072xb.h" 
+#include "stm32f0xx_hal_tim.h"
+
+
+
+/*  Function used to set the CAN configuration to the default reset state *****/ 
+void CAN_DeInit(CAN_TypeDef* CANx);
+uint8_t CAN_Init(CAN_TypeDef* CANx, CAN_InitTypeDef* CAN_InitStruct); 
+void CAN_StructInit(CAN_InitTypeDef* CAN_InitStruct);
+void CAN_FilterInit(CAN_FilterConfTypeDef* CAN_FilterInitStruct);
+void CAN_ITConfig(CAN_TypeDef* CANx, uint32_t CAN_IT, FunctionalState NewState);
+uint8_t CAN_Transmit(CAN_TypeDef* CANx, CanTxMsgTypeDef* TxMessage);
+void CAN_Receive(CAN_TypeDef* CANx, uint8_t FIFONumber, CanRxMsgTypeDef* RxMessage);
+
+
+void CO_CANconfigGPIO (void);
+
+/* LEDs Functions           */
+void InitCanLeds(void);
+void CanLedsSet(CoLeds LED);
+void CanLedsOFF(CoLeds LED);
+
+
+/* Timer Functions           */
+void TIM_ClearITPendingBit(TIM_TypeDef* TIMx, uint16_t TIM_IT);
+void TIM_Base_SetConfig(TIM_TypeDef *TIMx, TIM_Base_InitTypeDef *Structure);
+void TIM_ITConfig(TIM_TypeDef* TIMx, uint16_t TIM_IT, FunctionalState NewState);
+void TIM_Cmd(TIM_TypeDef* TIMx, FunctionalState NewState);
+
+/* Timer interrupt          */
+void TIM2_IRQHandler(void);
+
+void program1ms(void); 
+
+
+static GPIO_InitTypeDef  GPIO_InitStruct;
+
+
+/* Definition for CANx clock resources */
+
+#define CAN                            CAN1        // it was CANx instead of CAN
+#define CAN_CLK_ENABLE()               __HAL_RCC_CAN1_CLK_ENABLE()
+#define CAN_GPIO_CLK_ENABLE()          __HAL_RCC_GPIOA_CLK_ENABLE()
+
+#define CANx_FORCE_RESET()              __HAL_RCC_CAN1_FORCE_RESET()
+#define CANx_RELEASE_RESET()            __HAL_RCC_CAN1_RELEASE_RESET()
+
+/* Definition for USARTx Pins */
+#define GPIO_Pin_CAN_TX               GPIO_PIN_12
+#define CAN_TX_GPIO_PORT              GPIOA
+#define CAN_TX_AF                     GPIO_AF0_CAN
+
+#define GPIO_Pin_CAN_RX               GPIO_PIN_11      
+#define CAN_RX_GPIO_PORT              GPIOA
+#define CAN_RX_AF                     GPIO_AF0_CAN
+
+/* Definition for USARTx's NVIC */
+#define CAN_RX_IRQn                   CEC_CAN_IRQn
+#define CAN_RX_IRQHandler             CEC_CAN_IRQHandler
+
+#define IS_FUNCTIONAL_STATE(STATE) (((STATE) == DISABLE) || ((STATE) == ENABLE))
+
+
+
+
+/******************************************************************************/
+#ifdef  USE_FULL_ASSERT
+
+/*******************************************************************************
+* Macro Name     : assert_param
+* Description    : The assert_param macro is used for function's parameters check.
+* Input          : - expr: If expr is false, it calls assert_failed function
+*                    which reports the name of the source file and the source
+*                    line number of the call that failed.
+*                    If expr is true, it returns no value.
+* Return         : None
+*******************************************************************************/
+ #define assert_param(expr) ((expr) ? (void)0 : assert_failed((uint8_t *)__FILE__, __LINE__))
+
+/* Exported functions ------------------------------------------------------- */
+  void assert_failed(uint8_t* file, uint32_t line);
+#else
+  #define assert_param(expr) ((void)0)
+#endif /* USE_FULL_ASSERT */

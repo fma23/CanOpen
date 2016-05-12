@@ -1,0 +1,63 @@
+/**
+ ******************************************************************************
+ * @file    timer.c
+ * @author  VJ
+ * @version v1.0
+ * @date    19-Jul-2013
+ * @brief   Timer source file
+ ******************************************************************************
+ */
+
+/* Includes ------------------------------------------------------------------*/
+#include "timer.h"
+#include "stm32f0xx.h"
+#include "stm32f0xx_hal_tim.h"
+#include "stm32f0xx_hal_tim_ex.h"
+#include "stm32f0xx_hal.h"
+
+
+/* Private typedef -----------------------------------------------------------*/
+/* Private define ------------------------------------------------------------*/
+/* Private variable ----------------------------------------------------------*/
+volatile uint32_t timer1ms;
+/* Private function ----------------------------------------------------------*/
+/**
+ * @brief  TIMER Initialization of RCC
+ * @input  None
+ * @output None
+ * @return None
+ *
+*/
+void TIMER_InitRCC(void)
+{
+
+   __HAL_RCC_TIM2_CLK_ENABLE();
+   __HAL_RCC_GPIOA_CLK_ENABLE();
+
+}
+
+/**
+ * @brief  TIMER General Initialization
+ * @input  None
+ * @output None
+ * @return None
+ *
+*/
+void TIMER_InitGeneral(void)
+{
+  TIM_Base_InitTypeDef  TimeBaseStructure;  
+
+  /* Time Base configuration 1ms based on HCLK 72MHz using HSI */
+  TimeBaseStructure.Prescaler = 4800;
+  TimeBaseStructure.CounterMode = TIM_COUNTERMODE_UP;
+  TimeBaseStructure.Period = 10;
+  TimeBaseStructure.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+
+  //TimeBaseInit(TIM2, &TimeBaseStructure);
+  TIM_Base_SetConfig(TIM2, &TimeBaseStructure);                //timer2 is a general purpose timer.
+
+
+  TIM_ITConfig(TIM2, TIM_IT_UPDATE, ENABLE);                  /* Enable the TIM Update Interrupt */
+  TIM_Cmd(TIM2, ENABLE);                                      /* TIM counter enable */
+  NVIC_EnableIRQ(TIM2_IRQn);                                  /* Enable TIM2 interrupt */
+}
